@@ -1,5 +1,5 @@
 import * as Actions from './actions';
-import { User } from '../../models/user';
+import { User } from '../models/user';
 
 export interface UserState {
   user: User;
@@ -11,7 +11,7 @@ const initialState: AppState = {
   user: new User(),
 };
 
-const reducer = (
+export const reducer = (
   state: AppState = initialState,
   action: Actions.AppAction
 ): AppState => {

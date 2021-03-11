@@ -1,4 +1,4 @@
-import { User } from '../../models/user';
+import { User } from '../models/user';
 
 export enum UserActions {
   GetUser = 'GET_USER',
