@@ -1,7 +1,7 @@
 import React, { SyntheticEvent } from 'react';
 
 
-export function RegisterComponent() {
+function RegisterComponent() {
     function handleFormInput(e: SyntheticEvent) {
 
     }
@@ -31,3 +31,5 @@ export function RegisterComponent() {
         </div>
     )
 }
+
+export default RegisterComponent;
