@@ -25,7 +25,7 @@ export function getUser(user: User): UserAction {
   return action;
 }
 
-export function changeLogin(): UserAction {
+export function changeLogin(user: User): UserAction {
   const action: UserAction = {
     type: UserActions.LoginChange,
     payload: new User(),
