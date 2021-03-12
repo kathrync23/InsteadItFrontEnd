@@ -11,7 +11,7 @@ const initialState: AppState = {
   user: new User(),
 };
 
-const reducer = (
+export const reducer = (
   state: AppState = initialState,
   action: Actions.AppAction
 ): AppState => {
