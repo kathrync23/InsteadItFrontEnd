@@ -1,9 +1,13 @@
 import React, { SyntheticEvent } from 'react';
+import { useHistory } from 'react-router';
 
 function RegisterComponent() {
+  const history = useHistory();
   function handleFormInput(e: SyntheticEvent) {}
 
-  function submitForm() {}
+  function submitForm() {
+    history.push('/login');
+  }
 
   return (
     <div className='form-input'>
