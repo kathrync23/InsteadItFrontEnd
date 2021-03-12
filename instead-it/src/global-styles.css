@@ -11,3 +11,13 @@
   flex-direction: row;
   padding: 30px;
 }
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+input {
+  margin: 10px;
+}
