@@ -1,0 +1,13 @@
+.thread-detail {
+  border-style: solid;
+  border-width: 2;
+  color: blue;
+  margin: 20px;
+  padding: 20px;
+}
+
+.thread-table {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+}

@@ -1,12 +1,9 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 import { User } from '../User/user';
 import { getUser } from '../store/actions';
-import { UserState } from '../store/reducer';
-
 export function LogoutComponent() {
-  let user = useSelector((state: UserState) => state.user);
   const dispatch = useDispatch();
   const history = useHistory();
 
