@@ -2,7 +2,8 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { BrowserRouter, Link, Route, useLocation } from 'react-router-dom';
-import { UserState } from '../store/reducer';
+import { ThreadState, UserState } from '../store/reducer';
+import { FullThreadComponent } from '../Thread/fullThread.component';
 import { ThreadList } from '../Thread/thread.list.component';
 import LoginComponent from '../User/Login';
 import RegisterComponent from '../User/Register';
@@ -14,6 +15,7 @@ export default function RouterComponent() {
   const location = useLocation();
 
   let user = useSelector((state: UserState) => state.user);
+  let thread = useSelector((state: ThreadState) => state.thread);
 
   return (
     <BrowserRouter>
@@ -44,6 +46,10 @@ export default function RouterComponent() {
         <Route path='/logout' component={LogoutComponent} />
         <Route path='/threads' component={ThreadList} />
         <Route path='/register' component={RegisterComponent} />
+        <Route
+          path={`/threads/${thread.title.substring(0, 5)}`}
+          component={FullThreadComponent}
+        />
       </ErrorBoundaryComponent>
     </BrowserRouter>
   );

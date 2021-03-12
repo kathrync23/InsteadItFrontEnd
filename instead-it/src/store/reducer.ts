@@ -34,6 +34,9 @@ export const reducer = (
     case Actions.ThreadActions.GetThreads:
       newState.threads = action.payload as Thread[];
       return newState;
+    case Actions.ThreadActions.ChangeThread:
+      newState.thread = action.payload as Thread;
+      return newState;
     case Actions.ThreadActions.GetComments:
       newState.comments = action.payload as Comment[];
       return newState;

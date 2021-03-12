@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { changeLogin, getUser } from '../store/actions';
 import userService from './user.service';
 import { User } from './user';
+import { useHistory } from 'react-router';
 
 export function LoginComponent() {
   const user = useSelector((state: UserState) => state.user);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   function handleFormInput(e: SyntheticEvent) {
     let u: any = { ...user };
@@ -32,6 +34,7 @@ export function LoginComponent() {
         testUser.username = 'something else';
         dispatch(getUser(testUser));
       });
+    history.push('/threads');
   }
 
   return (

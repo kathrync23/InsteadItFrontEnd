@@ -1,4 +1,5 @@
 export class Thread {
+  id: number = 0;
   title: string = 'a';
   content: string = 'a';
 }
