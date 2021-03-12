@@ -18,16 +18,21 @@ export default function RouterComponent() {
       <Navbar id='navBar'>
         <Nav className='nav'>
           {user.username === 'LOGGED OUT' && (
-            <Nav.Link href='Login' className='nav-link'>
-              <Link to='/login'>Login</Link> ||{'\t'}
-            </Nav.Link>
+            <>
+              <Nav.Link href='Login' className='nav-link'>
+                <Link to='/login'>Login</Link>
+              </Nav.Link>
+              <Nav.Link href='Register' className='nav-link'>
+                ||{'\t'} <Link to='/register'>Sign up</Link>
+              </Nav.Link>
+            </>
           )}
           <Nav.Link href='threads' className='nav-link'>
-            <Link to='/threads'>View Threads</Link> ||{'\t'}
+            ||{'\t'} <Link to='/threads'>View Threads</Link>
           </Nav.Link>
           {user && user.username !== 'LOGGED OUT' && (
             <Nav.Link href='Logout' className='nav-link'>
-              <Link to='/logout'>Logout</Link>
+              ||{'\t'} <Link to='/logout'>Logout</Link>
             </Nav.Link>
           )}
         </Nav>
