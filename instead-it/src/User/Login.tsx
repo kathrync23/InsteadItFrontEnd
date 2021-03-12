@@ -27,12 +27,12 @@ export function LoginComponent() {
     }
 
     return (
-        <div className='form-group'>
-           <label htmlFor="username" className="inputs">Username</label> <input type='text' className='form-control' onChange={handleFormInput} name='username'/>
-           <br/>
-           <label htmlFor="password" className="inputs">Password </label><input type='password' className='form-control' onChange={handleFormInput} name='password'/>
-           <br/>
-           <button className='btn btn-outline-dark' onClick={submitForm}>Login</button>
+        <div className="form-inline col-md-6">
+           <label htmlFor="username" className="inputs">Username</label> {' '} <input type="text" className="form-control mb-2 mr-sm-2" onChange={handleFormInput} name='username'/>
+           {' '}
+           <label htmlFor="password" className="inputs">Password </label><input type="password" className="form-control" onChange={handleFormInput} name='password'/>
+           {' '}
+           <button className="btn btn-success" onClick={submitForm}>Login</button>
         </div>
     )
 }
