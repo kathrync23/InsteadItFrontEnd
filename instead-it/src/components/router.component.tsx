@@ -3,6 +3,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { BrowserRouter, Link, Route, useLocation } from 'react-router-dom';
 import { UserState } from '../store/reducer';
+import LoginComponent from '../User/Login';
 import ErrorBoundaryComponent from './error.component';
 import { LogoutComponent } from './logout.component';
 import { TempComponent } from './temp.component';
@@ -32,7 +33,7 @@ export default function RouterComponent() {
         </Nav>
       </Navbar>
       <ErrorBoundaryComponent key={location.pathname}>
-        <Route path='/login' component={TempComponent} />
+        <Route path='/login' component={LoginComponent} />
         <Route path='/logout' component={LogoutComponent} />
         <Route path='/threads' component={TempComponent} />
       </ErrorBoundaryComponent>

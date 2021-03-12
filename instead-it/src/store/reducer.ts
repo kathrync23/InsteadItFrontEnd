@@ -1,5 +1,5 @@
 import * as Actions from './actions';
-import { User } from '../models/user';
+import { User } from '../User/user';
 
 export interface UserState {
   user: User;
@@ -25,3 +25,5 @@ export const reducer = (
       return state;
   }
 };
+
+export default reducer;

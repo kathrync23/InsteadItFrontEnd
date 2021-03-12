@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
-import { User } from '../models/user';
+import { User } from '../User/user';
 import { getUser } from '../store/actions';
 import { UserState } from '../store/reducer';
 
