@@ -14,16 +14,14 @@ export function ThreadDetail(props: PropType) {
   function changeStoreThread() {
     dispatch(changeThread(props.thread));
     console.log(thread);
-    history.push('/threads/' + thread.title.substr(0, 5));
+    history.push('/threads/' + thread.title);
   }
 
   return (
     <div className='thread-detail'>
       <h3>{props.thread.title}</h3>
       <p>{props.thread.content}</p>
-      <Link
-        to={`/threads/${props.thread.title.substr(0, 5)}`}
-        onClick={changeStoreThread}>
+      <Link to={`/threads/${props.thread.title}`} onClick={changeStoreThread}>
         View Thread
       </Link>
     </div>

@@ -12,24 +12,29 @@ function RegisterComponent() {
   return (
     <div className='form-input'>
       <form>
-        <label>
-          Username:
-          <input type='text' name='username' onChange={handleFormInput} />
-        </label>
+        <label>Username:</label>
+        <input
+          type='text'
+          name='username'
+          onChange={handleFormInput}
+          placeholder='Username'
+        />
         <br />
-        <label>
-          Password:
-          <input type='password' name='password' onChange={handleFormInput} />
-          <br />
-        </label>
-        <label>
-          Verify Password:
-          <input
-            type='password'
-            name='verifyPassword'
-            onChange={handleFormInput}
-          />
-        </label>
+        <label>Password:</label>
+        <input
+          type='password'
+          name='password'
+          onChange={handleFormInput}
+          placeholder='Password'
+        />
+        <br />
+        <label>Verify Password:</label>
+        <input
+          type='password'
+          name='verifyPassword'
+          onChange={handleFormInput}
+          placeholder='Verify Password'
+        />
         <br />
         <button className='btn-btn-submit' onClick={submitForm}>
           Register

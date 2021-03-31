@@ -47,7 +47,7 @@ export default function RouterComponent() {
         <Route path='/threads' component={ThreadList} />
         <Route path='/register' component={RegisterComponent} />
         <Route
-          path={`/threads/${thread.title.substring(0, 5)}`}
+          path={`/threads/${thread.title}`}
           component={FullThreadComponent}
         />
       </ErrorBoundaryComponent>

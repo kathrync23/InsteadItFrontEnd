@@ -38,30 +38,34 @@ export function LoginComponent() {
   }
 
   return (
-    <div className='form-group'>
-      <label htmlFor='username' className='inputs'>
-        Username
-      </label>{' '}
-      <input
-        type='text'
-        className='form-control'
-        onChange={handleFormInput}
-        name='username'
-      />
-      <br />
-      <label htmlFor='password' className='inputs'>
-        Password{' '}
-      </label>
-      <input
-        type='password'
-        className='form-control'
-        onChange={handleFormInput}
-        name='password'
-      />
-      <br />
-      <button className='btn btn-outline-dark' onClick={submitForm}>
-        Login
-      </button>
+    <div className='form-input'>
+      <form>
+        <label htmlFor='username' className='inputs'>
+          Username:
+        </label>
+        <input
+          type='text'
+          className='form-control'
+          onChange={handleFormInput}
+          name='username'
+          placeholder='Username'
+        />
+        <br />
+        <label htmlFor='password' className='inputs'>
+          Password:
+        </label>
+        <input
+          type='password'
+          className='form-control'
+          onChange={handleFormInput}
+          name='password'
+          placeholder='Password'
+        />
+        <br />
+        <button className='btn-btn-submit' onClick={submitForm}>
+          Login
+        </button>
+      </form>
     </div>
   );
 }

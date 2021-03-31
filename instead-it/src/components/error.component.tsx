@@ -42,10 +42,10 @@ class ErrorBoundaryComponent extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <>
-          <h1>
+          <h3>
             We're sorry for the inconvience. An error has occured, please
             contact support if this persists.{' '}
-          </h1>
+          </h3>
           {this.state.error?.name + ': ' + this.state.error?.message}
         </>
       );

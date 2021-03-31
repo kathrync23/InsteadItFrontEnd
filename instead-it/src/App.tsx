@@ -7,6 +7,10 @@ import RouterComponent from './components/router.component';
 function App() {
   return (
     <div className='App'>
+      <h1>
+        {'\n'}
+        Instead It
+      </h1>
       <BrowserRouter>
         <RouterComponent />
       </BrowserRouter>
